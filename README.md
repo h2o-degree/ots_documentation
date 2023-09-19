@@ -53,8 +53,8 @@ Lora Port : 52 - Once every 23 transmissions
 | 1 | Water diagnostic | 8-bit bitmap | see table 52.2 |
 | 2 | Temperature fahrenheit | 8-bit big endian unsigned int | |
 | 3 | Reset code |  8-bit big endian unsigned int  | |
-| 4 | Battery voltage | 16-bit big endian unsigned int | (Value +200)/100 | 
-| 5 |   |   | |
+| 4 | Battery voltage | 16-bit big endian unsigned int | (value +200)/100 | 
+| 5 | | | |
 | 6 | Status byte | 8-bit bitmap | see table 52.3 |
 | 7 | Reset count | 16-bit big endian unsigned int  | 
 | 8 | | | |
@@ -91,7 +91,7 @@ Lora Port : 52 - Once every 23 transmissions
 
 | Bit | Descriptipn |
 | --- | --- |
-| 7 MSB |  Magnet Flag 1 = magnet generated packet | 0 = not a magnet generated packet |
+| 7 MSB |  Magnet Flag 1 = magnet generated packet,  0 = not a magnet generated packet |
 | 6,5,4 | Major firmware number |
 | 3,2,1 | Minor firmware number |
 | 0 |  Power up packet flag 1 = power up | 0 = not power up |
@@ -109,10 +109,10 @@ LoRa Port: 141/145 - Magnet triggered transmission
 | 2 | | | |
 | 3 | | | |
 | 4 | Channel 2 pulse count | 32-bit big endian unsigned int | value / 256 | 
-| 5 |   |  t | |
+| 5 | | | |
 | 6 | | | |
-| 7 |   |    | 
-| 8 | Battery voltage | 8-bit big endian unsigned integer | (Value +200)/100 |
+| 7 | | | | 
+| 8 | Battery voltage | 8-bit big endian unsigned integer | (value +200)/100 |
 | 9 | Transmit attempt count | 16-bit big endian unsigned int | 
 | 10 | | | |
 
@@ -120,21 +120,32 @@ LoRa Port: 141/145 - Magnet triggered transmission
 
 # L542xx Port 51 Series Dry Contact Pulse Meter Heath Packet
 
+Lora Port : 51 - Once every 23 transmissions
+
 | Byte Index | Descriptipn | Data Type | Bitmap / Notes |
 | --- | --- | --- | --- |
-| 0 | Channel 1 pulse count | 32-bit big endian unsigned int | |
-| 1 | | | |
-| 2 | | | |
+| 0 | Reserved | 8-bit | not used |
+| 1 | Reserved | 8-bit | not used |
+| 2 | Microchip mac staatus flags | 32-bit big endian bitmap |  Stack dependent. See table 51.1 |
 | 3 | | | |
-| 4 | Channel 2 pulse count | 32-bit big endian unsigned int | value / 256 | 
-| 5 |   |  t | |
-| 6 | | | |
-| 7 |   |    | 
-| 8 | Battery voltage | 8-bit big endian unsigned integer | (Value +200)/100 |
+| 4 | | | | 
+| 5 | | | |
+| 6 | Status byte  | 8-bit bitmap | |
+| 7 | Reset count |  16-bit big endian unsigned int  | |
+| 8 | | | |
 | 9 | Transmit attempt count | 16-bit big endian unsigned int | 
 | 10 | | | |
 
+## Table 51.1 : L54230 Status Byte Bitmap
 
-Lora Port : 51 - Once every 23 transmissions
+Stack document: https://ww1.microchip.com/downloads/en/DeviceDoc/40001784B.pdf
+
+| Bit | Descriptipn |
+| --- | --- |
+| 7 MSB |  Unused  |
+| 6,5,4 | Major firmware version |
+| 3,2,1 | Stack version - if 5(b101) → v1.0.5 of the Microchip Stack, if 3(b011) → v1.0.3 of the Microchip Stack |
+| 0 |  Unused |
+
 
 
