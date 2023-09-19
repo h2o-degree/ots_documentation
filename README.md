@@ -1,8 +1,17 @@
-##### Table of Contents
-[L54120 Port 210/211](#210)  
-[L54120 Port 212/213](#212)  
-[L54120 Port 212/213](#52)  
-[L54120 L54120 Hardware Diagnostic Byte](#52.1)  
+
+# H2O Degree OTS Documentation
+
+## L54120
+[Port 210/211](#210)  
+[Port 212/213](#212)  
+[Port 52](#52)  
+    [Hardware Diagnostic Byte Bitmap](#52.1)  
+    [Water Diagnostic Byte Bitmap](#52.2)  
+    [Status Byte Bitmap](#52.3)  
+
+##  L542xx
+[Port 140/141/145](#14x)  
+[Port 51](#51)  
 
 <a name="210"/>  
 
@@ -70,7 +79,7 @@ Lora Port : 52 - Once every 23 transmissions
 
 <a name="52.1"/> 
 
-## Table 52.1 : L54120 Hardware Diagnostic Byte
+## Table 52.1 : L54120 Hardware Diagnostic Byte Bitmap
 
 | Bit | Descriptipn |
 | --- | --- |
@@ -83,7 +92,9 @@ Lora Port : 52 - Once every 23 transmissions
 | 6 | Undefined | 
 | 7 | Undefined | 
 
-## Table 52.2 : L54120  Water Diagnostic Byte
+<a name="52.2"/> 
+
+## Table 52.2 : L54120  Water Diagnostic Byte Bitmap
 
 | Bit | Descriptipn |
 | --- | --- |
@@ -98,6 +109,8 @@ Lora Port : 52 - Once every 23 transmissions
 
 ## Table 52.3 : L54120 Status Byte Bitmap
 
+<a name="52.3"/> 
+
 | Bit | Descriptipn |
 | --- | --- |
 | 7 MSB |  Magnet Flag 1 = magnet generated packet,  0 = not a magnet generated packet |
@@ -105,6 +118,7 @@ Lora Port : 52 - Once every 23 transmissions
 | 3,2,1 | Minor firmware number |
 | 0 |  Power up packet flag 1 = power up | 0 = not power up |
 
+<a name="14x"/> 
 
 # L542xx Port 14x Series Dry Contact Pulse Meter Commodity Packet
 
@@ -125,7 +139,7 @@ LoRa Port: 141/145 - Magnet triggered transmission
 | 9 | Transmit attempt count | 16-bit big endian unsigned int | 
 | 10 | | | |
 
-
+<a name="51"/> 
 
 # L542xx Port 51 Series Dry Contact Pulse Meter Heath Packet
 
