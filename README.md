@@ -7,16 +7,16 @@ LoRa Port: 211 - Magnet triggered transmission
 
 | Byte Index | Descriptipn | Data Type | BItmap / Notes |
 | --- | --- | --- | --- |
-| 0 | | | 
+| 0 | Water gallons integer| 32-bit big endian unsigned int | |
 | 1 | | | 
 | 2 | | | 
 | 3 | | | 
-| 4 | | | 
-| 5 | | | 
+| 4 | Water gallons decimal | 8 bit dec | value / 256 | 
+| 5 | Flow events | 16-bit big endian insigned int | |
 | 6 | | | 
-| 7 | | | 
+| 7 | Flow time minutes | 16-bit big endian insigned int  | 
 | 8 | | | 
-| 9 | | | 
+| 9 | Transmit attempt count| 16-bit big endian insigned int | 
 | 10 | | | 
 
 
