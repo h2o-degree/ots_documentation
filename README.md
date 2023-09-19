@@ -1,4 +1,10 @@
+##### Table of Contents
+[L54120 Port 210/211](#210)  
+[L54120 Port 212/213](#212)  
+[L54120 Port 212/213](#52)  
+[L54120 L54120 Hardware Diagnostic Byte](#52.1)  
 
+<a name="210"/>  
 
 # L54120 Port 210/211 Aqura Point of Use Water Meter Commodity Packet  
 For firmware version < 0.6 with born on date earlier than Oct 13th 2022  
@@ -19,6 +25,7 @@ LoRa Port: 211 - Magnet triggered transmission
 | 9 | Transmit attempt count | 16-bit big endian unsigned int | 
 | 10 | | | |
 
+<a name="212"/>  
 
 # L54120 Port 212/213 Aqura Point of Use Water Meter Commodity Packet
 For firmware version >= 0.6 with born on date later than Oct 13th 2022
@@ -40,7 +47,7 @@ LoRa Port: 213 - Magnet triggered transmission
 | 9 | Battery VDC millivolts | 16-bit big endian unsigned int | 
 | 10 | | | |
 
-
+<a name="52"/> 
 
 # L54120 Port 52 Aqura Point of Use Water Meter Heath Packet
 
@@ -60,6 +67,8 @@ Lora Port : 52 - Once every 23 transmissions
 | 8 | | | |
 | 9 | Transmit attempt count | 16-bit big endian unsigned int | 
 | 10 | | | |
+
+<a name="52.1"/> 
 
 ## Table 52.1 : L54120 Hardware Diagnostic Byte
 
