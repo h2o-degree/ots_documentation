@@ -27,15 +27,18 @@
 OTS end devices not previously assigned to any LoRaWAN Network Server (LNS).
 The device you purchased is an Off the Shelf (OTS) LoRaWAN end device.  It has not been provisioned onto any LoRaWAN Network Server.  In figure 1 below the OTS end device is one of the Pink, Purple, Yellow, Green, Orange or Red end devices.
 
-![devices](https://github.com/[h2o-degree/ots_documentation/blob/main/images/ots1.png?raw=true)
-
-
+![Figure 1](images/ots1.png)
 
 
 Packets broadcast by end devices will be picked up by one or more gateways within the network as illustrated in Figure 2.  When deploying an OTS end device the customer is responsible to provide a gateway compatible with the LNS they intend to use.
 
+![Figure 2](images/ots2.png)
+
+
 Gateways have a multi-channel and multi data radio frequency device that can scan and detect packets on any of the active channels and then demodulate the packets.
 Gateways are simply passage ways to the core LoRaWAN Network Server (LNS) and typically have no built-in intelligence.  Gateways typically have an Ethernet backhaul.  However, some gateways use 2G, 3G or 4G backhaul using standard cellular modems.
+
+![Figure 3](images/ots3.png)
 
 When the OTS end device is manufactured the following tasks are performed
 The 16-byte APPKEY is inserted into NVM of the end device.  
