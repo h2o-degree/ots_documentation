@@ -9,3 +9,6 @@ Set up a decoder on the LNS if you want to see the data from the end device in t
 For more information on setting up an off the shelf LoRa device please go to :
 
 h2odegree.net/lora
+
+
+![QR Code](images/qr.png)
