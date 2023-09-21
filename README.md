@@ -6,7 +6,8 @@
 [LNS](#lns)  
 [Provisioning](#provisioning)  
 [Checklist](#checklist)  
-[Product Box Document](product_doc.md)
+[Product Box Document - Web View](product_doc.md)
+[Product Box Document - PDF(pdfs/product_doc.pdf)
 
 ### L54120
 [Port 210/211](#210)  
