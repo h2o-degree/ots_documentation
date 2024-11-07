@@ -155,6 +155,31 @@ LoRa Port: 213 - Magnet triggered transmission
 | 9 | Battery VDC millivolts | 16-bit big endian unsigned int | 
 | 10 | | | |
 
+Example:
+
+
+"sensor_data": {
+        "gallons": 36116.2,
+        "flow_events": 9442,
+        "flow_time_minutes": 17640,
+        "battery_vdc_millivolts": 3618 
+}
+
+Raw hex payload: 00008d143f24e244e80e22
+
+00008d14 - Gallons Int bytes 0 to 3 = 36116
+
+3f - Gallons decimal byte 4 = 63 = 63 / 256 = .24
+
+24e2 = Flow Events bytes 5 to 6 = 9442
+
+44e8  = Flow Time Minutes = 17640
+
+0e22 = Battery VDC Millivolts = 3618
+
+
+      
+
 <a name="52"/> 
 
 # L54120 Port 52 Aqura Point of Use Water Meter Heath Packet
