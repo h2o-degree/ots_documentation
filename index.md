@@ -17,8 +17,8 @@
     [Status Byte Bitmap](#52.3)  
 
 ###  L542xx
-[Port 140/141/145](#14x)  
-[Port 51](#51)  
+[Commodity Payload](#14x)  
+[Diagnostic Payload](#51)  
 
 
 <a name="overview"/>  
