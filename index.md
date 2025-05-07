@@ -244,21 +244,27 @@ Lora Port : 52 - Once every 23 transmissions
 
 <a name="14x"/> 
 
-# L542xx Port 14x Series Dry Contact Pulse Meter Commodity Packet
+# L542xx Series Dry Contact Pulse Meter Commodity Packet
 
 Devices pre version 10 firmware:
-Lora Port : 140 - Hourly , network setting ping or power up
-LoRa Port: 141,142,145 - Magnet triggered transmission
+
+     Lora Port : 140 - Hourly , network setting ping or power up
+
+     LoRa Port: 141,142,145 - Magnet triggered transmission
+
 
 Devices v10 and v11 firmware:
-Lora Port : 150 - Hourly , network setting ping or power up
-LoRa Port: 151,152,155 - Magnet triggered transmission
 
-Devices v12 and up
-Lora Port : 170 - Hourly , network setting ping or power up
-LoRa Port: 171,172,175 - Magnet triggered transmission
+     Lora Port : 150 - Hourly , network setting ping or power up
+
+     LoRa Port: 151,152,155 - Magnet triggered transmission
 
 
+Devices v12 and up:
+
+     Lora Port : 170 - Hourly , network setting ping or power up
+
+     LoRa Port: 171,172,175 - Magnet triggered transmission
 
 
 | Byte Index | Descriptipn | Data Type | Bitmap / Notes |
@@ -277,7 +283,7 @@ LoRa Port: 171,172,175 - Magnet triggered transmission
 
 <a name="51"/> 
 
-# L542xx Port 51 Series Dry Contact Pulse Meter Heath Packet
+# L542xx Series Port 51 Dry Contact Pulse Meter Heath Packet
 
 Lora Port : 51 - Once every 23 transmissions
 
