@@ -285,12 +285,30 @@ Devices v12 and up:
 
 # L542xx Series Port 51 Dry Contact Pulse Meter Heath Packet
 
-Lora Port : 51 - Once every 23 transmissions
+Lora Port : 51 - Below v8.X 
 
 | Byte Index | Descriptipn | Data Type | Bitmap / Notes |
 | --- | --- | --- | --- |
 | 0 | Reserved | 8-bit | not used |
 | 1 | Reserved | 8-bit | not used |
+| 2 | Microchip mac staatus flags | 32-bit big endian bitmap |  Stack dependent. See table 51.1 |
+| 3 | | | |
+| 4 | | | | 
+| 5 | | | |
+| 6 | Status byte  | 8-bit bitmap | |
+| 7 | Reset count |  16-bit big endian unsigned int  | |
+| 8 | | | |
+| 9 | Transmit attempt count | 16-bit big endian unsigned int | 
+| 10 | | | |
+
+# L542xx Series Port 53 Dry Contact Pulse Meter Heath Packet
+
+Lora Port : 53 v8.X and above
+
+| Byte Index | Descriptipn | Data Type | Bitmap / Notes |
+| --- | --- | --- | --- |
+| 0 | FW Version Major | 8-bit | Firmware Version |
+| 1 | FW Version Minor | 8-bit | Firmware Version |
 | 2 | Microchip mac staatus flags | 32-bit big endian bitmap |  Stack dependent. See table 51.1 |
 | 3 | | | |
 | 4 | | | | 
