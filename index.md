@@ -117,7 +117,7 @@ Band 7(55-63)
 # L54120 Port 210/211 Aqura Point of Use Water Meter Commodity Packet  
 For firmware version < 0.6 with born on date earlier than Oct 13th 2022  
 Lora Port : 210 - Hourly , network setting ping or power up transmission  
-LoRa Port: 211 - Magnet triggered transmission  
+LoRa Port: 211 - Triggered transmission  
 
 | Byte Index | Descriptipn | Data Type | Bitmap / Notes |
 | --- | --- | --- | --- |
@@ -138,7 +138,7 @@ LoRa Port: 211 - Magnet triggered transmission
 # L54120 Port 212/213 Aqura Point of Use Water Meter Commodity Packet
 For firmware version >= 0.6 with born on date later than Oct 13th 2022
 Lora Port : 212 - Hourly , network setting ping or power up transmission
-LoRa Port: 213 - Magnet triggered transmission
+LoRa Port: 213 - Triggered transmission
 
 
 | Byte Index | Descriptipn | Data Type | Bitmap / Notes |
@@ -237,7 +237,7 @@ Lora Port : 52 - Once every 23 transmissions
 
 | Bit | Descriptipn |
 | --- | --- |
-| 7 MSB |  Magnet Flag 1 = magnet generated packet,  0 = not a magnet generated packet |
+| 7 MSB |  Magnet Flag 1 = Triggered packet,  0 = not a triggered packet |
 | 6,5,4 | Major firmware number |
 | 3,2,1 | Minor firmware number |
 | 0 |  Power up packet flag 1 = power up | 0 = not power up |
@@ -250,21 +250,21 @@ Devices pre version 10 firmware:
 
      Lora Port : 140 - Hourly , network setting ping or power up
 
-     LoRa Port: 141,142,145 - Magnet triggered transmission
+     LoRa Port: 141,142,145 - Triggered transmission
 
 
 Devices v10 and v11 firmware:
 
      Lora Port : 150 - Hourly , network setting ping or power up
 
-     LoRa Port: 151,152,155 - Magnet triggered transmission
+     LoRa Port: 151,152,155 - triggered transmission
 
 
 Devices v12 and up:
 
      Lora Port : 170 - Hourly , network setting ping or power up
 
-     LoRa Port: 171,172,175 - Magnet triggered transmission
+     LoRa Port: 171,172,175 - Triggered transmission
 
 
 | Byte Index | Descriptipn | Data Type | Bitmap / Notes |
