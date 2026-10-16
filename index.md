@@ -16,9 +16,6 @@
     [Water Diagnostic Byte Bitmap](#52.2)  
     [Status Byte Bitmap](#52.3)  
 
-###  L542xx
-[Commodity Payload](#14x)  
-[Diagnostic Payload](#51)  
 
 
 <a name="overview"/>  
@@ -243,92 +240,6 @@ Lora Port : 52 - Once every 23 transmissions
 | 0 |  Power up packet flag 1 = power up | 0 = not power up |
 
 <a name="14x"/> 
-
-# L542xx Series Dry Contact Pulse Meter Commodity Packet
-
-Devices pre version 10 firmware:
-
-     Lora Port : 140 - Hourly , network setting ping or power up
-
-     LoRa Port: 141,142,145 - Triggered transmission
-
-
-Devices v10 and v11 firmware:
-
-     Lora Port : 150 - Hourly , network setting ping or power up
-
-     LoRa Port: 151,152,155 - triggered transmission
-
-
-Devices v12 and up:
-
-     Lora Port : 170 - Hourly , network setting ping or power up
-
-     LoRa Port: 171,172,175 - Triggered transmission
-
-
-| Byte Index | Descriptipn | Data Type | Bitmap / Notes |
-| --- | --- | --- | --- |
-| 0 | Channel 1 pulse count | 32-bit big endian unsigned int | |
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | Channel 2 pulse count | 32-bit big endian unsigned int | value / 256 | 
-| 5 | | | |
-| 6 | | | |
-| 7 | | | | 
-| 8 | Battery voltage | 8-bit big endian unsigned integer | (value +200)/100 |
-| 9 | Transmit attempt count | 16-bit big endian unsigned int | 
-| 10 | | | |
-
-<a name="51"/> 
-
-# L542xx Series Port 51 Dry Contact Pulse Meter Heath Packet
-
-Lora Port : 51 - Below v8.X 
-
-| Byte Index | Descriptipn | Data Type | Bitmap / Notes |
-| --- | --- | --- | --- |
-| 0 | Reserved | 8-bit | not used |
-| 1 | Reserved | 8-bit | not used |
-| 2 | Microchip mac staatus flags | 32-bit big endian bitmap |  Stack dependent. See table 51.1 |
-| 3 | | | |
-| 4 | | | | 
-| 5 | | | |
-| 6 | Status byte  | 8-bit bitmap | |
-| 7 | Reset count |  16-bit big endian unsigned int  | |
-| 8 | | | |
-| 9 | Transmit attempt count | 16-bit big endian unsigned int | 
-| 10 | | | |
-
-# L542xx Series Port 53 Dry Contact Pulse Meter Heath Packet
-
-Lora Port : 53 v8.X and above
-
-| Byte Index | Descriptipn | Data Type | Bitmap / Notes |
-| --- | --- | --- | --- |
-| 0 | FW Version Major | 8-bit | Firmware Version |
-| 1 | FW Version Minor | 8-bit | Firmware Version |
-| 2 | Microchip mac staatus flags | 32-bit big endian bitmap |  Stack dependent. See table 51.1 |
-| 3 | | | |
-| 4 | | | | 
-| 5 | | | |
-| 6 | Status byte  | 8-bit bitmap | |
-| 7 | Reset count |  16-bit big endian unsigned int  | |
-| 8 | | | |
-| 9 | Transmit attempt count | 16-bit big endian unsigned int | 
-| 10 | | | |
-
-## Table 51.1 : L54230 Status Byte Bitmap
-
-Stack document: https://ww1.microchip.com/downloads/en/DeviceDoc/40001784B.pdf
-
-| Bit | Descriptipn |
-| --- | --- |
-| 7 MSB |  Unused  |
-| 6,5,4 | Major firmware version |
-| 3,2,1 | Stack version - if 5(b101) → v1.0.5 of the Microchip Stack, if 3(b011) → v1.0.3 of the Microchip Stack |
-| 0 |  Unused |
 
 
 
