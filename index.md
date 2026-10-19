@@ -327,7 +327,7 @@ LoRa Port: 215 - Triggered transmission
 | 9 | Diagnostic 1 | 8-bit bitmap  | see table 214.1 |
 | 10 | Diagnostic 2 | 8-bit bitmap  | see table 214.2 |
 
-## Table 214.1 : L54120 Water Diagnostic Byte 1 Bitmap
+## Table 214.1 : Water Diagnostic Byte 1 Bitmap
 
 | Bit | Descriptipn |
 | --- | --- |
@@ -340,11 +340,11 @@ LoRa Port: 215 - Triggered transmission
 | 6 | |
 | 7 | |
 
-## Table 214.1.1 : L54120 Battery Level
+## Table 214.1.1 : Battery Level
 
 | Value | Descriptipn |
 | --- | --- |
-| 0 | battery_vdc_millivolts = 2999 |
+| 0 | invalid value |
 | 1 | battery_vdc_millivolts = 2999 |
 | 2 | battery_vdc_millivolts = 3000 |
 | 3 | battery_vdc_millivolts = 3050 |
@@ -361,18 +361,36 @@ LoRa Port: 215 - Triggered transmission
 | 14 | battery_vdc_millivolts = 3600 |
 | 15 | battery_vdc_millivolts = 4000 |
 
-## Table 214.2 : L54120 Water Diagnostic Byte 2 Bitmap
+## Table 214.2 :  Water Diagnostic Byte 2 Bitmap
 
 | Bit | Descriptipn |
 | --- | --- |
-| 0 | Not defined |
-| 1 | Not defined |
-| 2 | Not defined |
-| 3 | Node Code 5-Bit big endian unsigned int |
+| 0 | TX Interval 3-Bit big endian unsigned int . See table 214.2.1|
+| 1 | |
+| 2 | |
+| 3 | Node Error Code 5-Bit big endian unsigned int |
 | 4 | |
 | 5 | |
 | 6 | |
 | 7 | |
+
+
+## Table 214.2.1 : Transmit Interval
+
+| Value | Descriptipn |
+| --- | --- |
+| 0 | not defined |
+| 1 | greater than 16 hours, or most likely corrupt |
+| 2 | < 120 seconds |
+| 3 | 16 hours |
+| 4 | 8 hours |
+| 5 | 120 seconds | 
+| 6 | 900 seconds |
+| 7 | 3600 seconds |
+
+
+Value mapping from code: • 7 → m_nDataTxInterval == 3600 (1 hour) • 6 → == 900 (15 minutes) • 5 → == 120 (2 minutes) • 4 → == 0x7080 (8 hours) • 3 → == 0xE100 (16 hours) • 2 → < 120 (less than 2 minutes) • 1 → > 0xE100 (greater than 16 hours, or most likely corrupt)
+
 
 
 
