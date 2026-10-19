@@ -9,12 +9,10 @@
 [Product Box Document - Web View](product_doc.md) or [PDF](pdfs/product_doc.pdf)
 
 ### L54120
-[Port 210/211](#210)  
-[Port 212/213](#212)  
-[Port 52](#52)  
-    [Hardware Diagnostic Byte Bitmap](#52.1)  
-    [Water Diagnostic Byte Bitmap](#52.2)  
-    [Status Byte Bitmap](#52.3)  
+[V 0.1 - V 0.5 Port 210/211](#210)  
+[V 0.6 - V 0.7 Port 212/213](#212)  
+[V 1.0 - V 2.5 Port 214/215](#214)  
+
 
 
 
@@ -134,9 +132,8 @@ LoRa Port: 211 - Triggered transmission
 | 10 | | | |
 
 
-<a name="52"/> 
 
-Port 52 Aqura Point of Use Water Meter Heath Packet
+# Port 52 Aqura Point of Use Water Meter Heath Packet
 
 Lora Port : 52 - Once every 23 transmissions
 
@@ -155,7 +152,6 @@ Lora Port : 52 - Once every 23 transmissions
 | 9 | Transmit attempt count | 16-bit big endian unsigned int | 
 | 10 | | | |
 
-<a name="52.1"/> 
 
 ## Table 52.1 : L54120 Hardware Diagnostic Byte Bitmap
 
@@ -170,7 +166,6 @@ Lora Port : 52 - Once every 23 transmissions
 | 6 | Undefined | 
 | 7 | Undefined | 
 
-<a name="52.2"/> 
 
 ## Table 52.2 : L54120  Water Diagnostic Byte Bitmap
 
@@ -187,7 +182,7 @@ Lora Port : 52 - Once every 23 transmissions
 
 ## Table 52.3 : L54120 Status Byte Bitmap
 
-<a name="52.3"/> 
+
 
 | Bit | Descriptipn |
 | --- | --- |
@@ -247,11 +242,8 @@ Raw hex payload: 00008d143f24e244e80e22
 0e22 = Battery VDC Millivolts = 3618
 
 
-      
 
-<a name="52"/> 
-
-Port 52 Aqura Point of Use Water Meter Heath Packet
+# Port 52 Aqura Point of Use Water Meter Heath Packet
 
 Lora Port : 52 - Once every 23 transmissions
 
@@ -270,7 +262,7 @@ Lora Port : 52 - Once every 23 transmissions
 | 9 | Transmit attempt count | 16-bit big endian unsigned int | 
 | 10 | | | |
 
-<a name="52.1"/> 
+
 
 ## Table 52.1 : L54120 Hardware Diagnostic Byte Bitmap
 
@@ -285,7 +277,7 @@ Lora Port : 52 - Once every 23 transmissions
 | 6 | Undefined | 
 | 7 | Undefined | 
 
-<a name="52.2"/> 
+
 
 ## Table 52.2 : L54120  Water Diagnostic Byte Bitmap
 
@@ -302,7 +294,7 @@ Lora Port : 52 - Once every 23 transmissions
 
 ## Table 52.3 : L54120 Status Byte Bitmap
 
-<a name="52.3"/> 
+
 
 | Bit | Descriptipn |
 | --- | --- |
@@ -311,7 +303,7 @@ Lora Port : 52 - Once every 23 transmissions
 | 3,2,1 | Minor firmware number |
 | 0 |  Power up packet flag 1 = power up | 0 = not power up |
 
-<a name="14x"/> 
+<a name="214"/>  
 
 
 
