@@ -306,4 +306,67 @@ Lora Port : 52 - Once every 23 transmissions
 <a name="214"/>  
 
 
+# V 1.0 - V 2.5  
+
+L54120 Port 214/215 Aqura Point of Use Water Meter Commodity Packet
+Lora Port : 214 - Hourly , network setting ping or power up transmission
+LoRa Port: 215 - Triggered transmission
+
+
+| Byte Index | Descriptipn | Data Type | Bitmap / Notes |
+| --- | --- | --- | --- |
+| 0 | Water gallons integer | 32-bit big endian unsigned int | |
+| 1 | | | |
+| 2 | | | |
+| 3 | | | |
+| 4 | Water gallons decimal | 8 bit dec | value / 256 | 
+| 5 | Flow events | 16-bit big endian unsigned int | |
+| 6 | | | |
+| 7 | Flow time minutes | 16-bit big endian unsigned int  | 
+| 8 | | | |
+| 9 | Diag 1 | 8-bit bitmap  | see table 214.1 |
+| 10 | Diag 2 | 8-bit bitmap  | see table 214.2 |
+
+## Table 214.1 : L54120 Water Diagnostic Byte 1 Bitmap
+
+| Bit | Descriptipn |
+| --- | --- |
+| 0 | Hot or cold : 0 = cold - 1 = hot |
+| 1 | Active Flow : 0 = no flow - 1 = flow |
+| 2 | Non-Zero TX Failures : 0 = no - 1 = yes |
+| 3 | Last Reset TX Failures : 0 = no - 1 = yes |
+| 4 | Battery Level 4-Bit big endian unsigned int - See table 214.1.1 |
+| 5 | |
+| 6 | |
+| 7 | |
+
+## Table 214.1.1 : L54120 Battery Level
+
+| Value | Descriptipn |
+| --- | --- |
+| 0 | battery_vdc_millivolts = 2999 |
+| 1 | battery_vdc_millivolts = 2999 |
+| 2 | battery_vdc_millivolts = 3000 |
+| 3 | battery_vdc_millivolts = 3050 |
+| 4 | battery_vdc_millivolts = 3100 |
+| 5 | battery_vdc_millivolts = 3150 
+| 6 | battery_vdc_millivolts = 3200 |
+| 7 | battery_vdc_millivolts = 3250 |
+| 8 | battery_vdc_millivolts = 3300 |
+| 9 | battery_vdc_millivolts = 3350 |
+| 10 | battery_vdc_millivolts = 3400 |
+| 11 | battery_vdc_millivolts = 3450 |
+| 12 | battery_vdc_millivolts = 3500 |
+| 13 | battery_vdc_millivolts = 3550 |
+| 14 | battery_vdc_millivolts = 3600 |
+| 15 | battery_vdc_millivolts = 4000 |
+
+
+
+
+
+
+
+
+
 
