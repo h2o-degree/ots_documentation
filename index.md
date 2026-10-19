@@ -324,8 +324,8 @@ LoRa Port: 215 - Triggered transmission
 | 6 | | | |
 | 7 | Flow time minutes | 16-bit big endian unsigned int  | 
 | 8 | | | |
-| 9 | Diag 1 | 8-bit bitmap  | see table 214.1 |
-| 10 | Diag 2 | 8-bit bitmap  | see table 214.2 |
+| 9 | Diagnostic 1 | 8-bit bitmap  | see table 214.1 |
+| 10 | Diagnostic 2 | 8-bit bitmap  | see table 214.2 |
 
 ## Table 214.1 : L54120 Water Diagnostic Byte 1 Bitmap
 
@@ -361,7 +361,18 @@ LoRa Port: 215 - Triggered transmission
 | 14 | battery_vdc_millivolts = 3600 |
 | 15 | battery_vdc_millivolts = 4000 |
 
+## Table 214.2 : L54120 Water Diagnostic Byte 2 Bitmap
 
+| Bit | Descriptipn |
+| --- | --- |
+| 0 | Not defined |
+| 1 | Not defined |
+| 2 | Not defined |
+| 3 | Node Code 5-Bit big endian unsigned int |
+| 4 | |
+| 5 | |
+| 6 | |
+| 7 | |
 
 
 
