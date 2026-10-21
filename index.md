@@ -391,13 +391,13 @@ Lora Port : 62 - Once every 23 transmissions
 
 | Byte Index | Descriptipn | Data Type | Bitmap / Notes |
 | --- | --- | --- | --- |
-| 0 | Hardware diagnostic | 8-bit bitmap | see table 62.1 below |
-| 1 | Water diagnostic | 8-bit bitmap | see table 62.2 below |
+| 0 | Hardware diagnostic | 8-bit bitmap | see table 62.1  |
+| 1 | Water diagnostic | 8-bit bitmap | see table 62.2  |
 | 2 | Temperature fahrenheit | 8-bit big endian unsigned int | |
 | 3 | Reset code |  8-bit big endian unsigned int  | |
 | 4 | Battery voltage | 16-bit big endian unsigned int | (value +200)/100 | 
 | 5 | | | |
-| 6 | Status byte | 8-bit bitmap | see table 62.3 below |
+| 6 | Status byte | 8-bit bitmap | see table 62.3  |
 | 7 | Reset count | 16-bit big endian unsigned int  | 
 | 8 | | | |
 | 9 | Transmit attempt count | 16-bit big endian unsigned int | 
@@ -535,13 +535,13 @@ Lora Port : 62 - Once every 23 transmissions
 
 | Byte Index | Descriptipn | Data Type | Bitmap / Notes |
 | --- | --- | --- | --- |
-| 0 | Hardware diagnostic | 8-bit bitmap | see table 62.4 below|
-| 1 | Water diagnostic | 8-bit bitmap | see table 62.5 below|
+| 0 | Hardware diagnostic | 8-bit bitmap | see table 62.4 |
+| 1 | Water diagnostic | 8-bit bitmap | see table 62.5 |
 | 2 | Temperature fahrenheit | 8-bit big endian unsigned int | |
 | 3 | Reset code |  8-bit big endian unsigned int  | |
 | 4 | Battery voltage | 16-bit big endian unsigned int | (value +200)/100 | 
 | 5 | | | |
-| 6 | Status byte | 8-bit bitmap | see table 62.6 below|
+| 6 | Status byte | 8-bit bitmap | see table 62.6 |
 | 7 | Reset count | 16-bit big endian unsigned int  | 
 | 8 | | | |
 | 9 | Transmit attempt count | 16-bit big endian unsigned int | 
