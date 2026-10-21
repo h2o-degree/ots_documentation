@@ -6,7 +6,7 @@
 [LNS](#lns)  
 [Provisioning](#provisioning)  
 [Checklist](#checklist)  
-[Product Box Document - Web View](product_doc.md) or [PDF](pdfs/product_doc.pdf)
+
 
 ### L54120
 [V 0.1 - V 0.5 Port 210/211](#210)  
