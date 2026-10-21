@@ -193,11 +193,7 @@ Lora Port : 52 - Once every 23 transmissions
 | 3,2,1 | Minor firmware number |
 | 0 |  Power up packet flag 1 = power up | 0 = not power up |
 
-
-
 <a name="212"/>  
-
-
 
 # L54120 V 0.6 - V 0.7  
 
@@ -329,7 +325,7 @@ LoRa Port: 215 - Triggered transmission
 | 9 | Diagnostic 1 | 8-bit bitmap  | see table 214.1 |
 | 10 | Diagnostic 2 | 8-bit bitmap  | see table 214.2 |
 
-## Table 214.1 : L54120 Water Diagnostic Byte 1 Bitmap
+### Table 214.1 : L54120 Water Diagnostic Byte 1 Bitmap
 
 | Bit | Descriptipn |
 | --- | --- |
@@ -342,7 +338,7 @@ LoRa Port: 215 - Triggered transmission
 | 6 | |
 | 7 | |
 
-## Table 214.1.1 : L54120 Battery Level
+### Table 214.1.1 : L54120 Battery Level
 
 | Value | Descriptipn |
 | --- | --- |
@@ -363,7 +359,7 @@ LoRa Port: 215 - Triggered transmission
 | 14 | battery_vdc_millivolts = 3600 |
 | 15 | battery_vdc_millivolts = 4000 |
 
-## Table 214.2 :  L54120 Water Diagnostic Byte 2 Bitmap
+### Table 214.2 :  L54120 Water Diagnostic Byte 2 Bitmap
 
 | Bit | Descriptipn |
 | --- | --- |
@@ -377,7 +373,7 @@ LoRa Port: 215 - Triggered transmission
 | 7 | |
 
 
-## Table 214.2.1 : L54120 Transmit Interval
+### Table 214.2.1 : L54120 Transmit Interval
 
 | Value | Descriptipn |
 | --- | --- |
@@ -395,16 +391,15 @@ LoRa Port: 215 - Triggered transmission
 
 Lora Port : 62 - Once every 23 transmissions
 
-
 | Byte Index | Descriptipn | Data Type | Bitmap / Notes |
 | --- | --- | --- | --- |
-| 0 | Hardware diagnostic | 8-bit bitmap | see table 52.1 |
-| 1 | Water diagnostic | 8-bit bitmap | see table 52.2 |
+| 0 | Hardware diagnostic | 8-bit bitmap | see table 62.1 below |
+| 1 | Water diagnostic | 8-bit bitmap | see table 62.2 below |
 | 2 | Temperature fahrenheit | 8-bit big endian unsigned int | |
 | 3 | Reset code |  8-bit big endian unsigned int  | |
 | 4 | Battery voltage | 16-bit big endian unsigned int | (value +200)/100 | 
 | 5 | | | |
-| 6 | Status byte | 8-bit bitmap | see table 52.3 |
+| 6 | Status byte | 8-bit bitmap | see table 62.3 below |
 | 7 | Reset count | 16-bit big endian unsigned int  | 
 | 8 | | | |
 | 9 | Transmit attempt count | 16-bit big endian unsigned int | 
@@ -412,7 +407,7 @@ Lora Port : 62 - Once every 23 transmissions
 
 
 
-## Table 62.1 : L54120 Hardware Diagnostic Byte Bitmap
+### Table 62.1 : L54120 Hardware Diagnostic Byte Bitmap
 
 | Bit | Descriptipn |
 | --- | --- |
@@ -427,7 +422,7 @@ Lora Port : 62 - Once every 23 transmissions
 
 
 
-## Table 62.2 : L54120  Water Diagnostic Byte Bitmap
+### Table 62.2 : L54120  Water Diagnostic Byte Bitmap
 
 | Bit | Descriptipn |
 | --- | --- |
@@ -440,7 +435,7 @@ Lora Port : 62 - Once every 23 transmissions
 | 6 | Undefined |
 | 7 | Undefined |
 
-## Table 62.3 : L54120 Status Byte Bitmap
+### Table 62.3 : L54120 Status Byte Bitmap
 
 | Bit | Descriptipn |
 | --- | --- |
@@ -474,7 +469,7 @@ LoRa Port: 215 - Triggered transmission
 | 9 | Diagnostic 1 | 8-bit bitmap  | see table 214.1 |
 | 10 | Diagnostic 2 | 8-bit bitmap  | see table 214.2 |
 
-## Table 214.1 : L54222 Water Diagnostic Byte 1 Bitmap
+### Table 214.1 : L54222 Water Diagnostic Byte 1 Bitmap
 
 | Bit | Descriptipn |
 | --- | --- |
@@ -487,7 +482,7 @@ LoRa Port: 215 - Triggered transmission
 | 6 | |
 | 7 | |
 
-## Table 214.1.1 : L54222 Battery Level
+### Table 214.1.1 : L54222 Battery Level
 
 | Value | Descriptipn |
 | --- | --- |
@@ -508,7 +503,7 @@ LoRa Port: 215 - Triggered transmission
 | 14 | battery_vdc_millivolts = 3600 |
 | 15 | battery_vdc_millivolts = 4000 |
 
-## Table 214.2 :  L54222 Water Diagnostic Byte 2 Bitmap
+### Table 214.2 :  L54222 Water Diagnostic Byte 2 Bitmap
 
 | Bit | Descriptipn |
 | --- | --- |
@@ -522,7 +517,7 @@ LoRa Port: 215 - Triggered transmission
 | 7 | |
 
 
-## Table 214.2.1 : L54222 Transmit Interval
+### Table 214.2.1 : L54222 Transmit Interval
 
 | Value | Descriptipn |
 | --- | --- |
@@ -542,13 +537,13 @@ Lora Port : 62 - Once every 23 transmissions
 
 | Byte Index | Descriptipn | Data Type | Bitmap / Notes |
 | --- | --- | --- | --- |
-| 0 | Hardware diagnostic | 8-bit bitmap | see table 52.1 |
-| 1 | Water diagnostic | 8-bit bitmap | see table 52.2 |
+| 0 | Hardware diagnostic | 8-bit bitmap | see table 62.1 below|
+| 1 | Water diagnostic | 8-bit bitmap | see table 62.2 below|
 | 2 | Temperature fahrenheit | 8-bit big endian unsigned int | |
 | 3 | Reset code |  8-bit big endian unsigned int  | |
 | 4 | Battery voltage | 16-bit big endian unsigned int | (value +200)/100 | 
 | 5 | | | |
-| 6 | Status byte | 8-bit bitmap | see table 52.3 |
+| 6 | Status byte | 8-bit bitmap | see table 62.3 below|
 | 7 | Reset count | 16-bit big endian unsigned int  | 
 | 8 | | | |
 | 9 | Transmit attempt count | 16-bit big endian unsigned int | 
@@ -556,7 +551,7 @@ Lora Port : 62 - Once every 23 transmissions
 
 
 
-## Table 62.1 : L54222 Hardware Diagnostic Byte Bitmap
+### Table 62.1 : L54222 Hardware Diagnostic Byte Bitmap
 
 | Bit | Descriptipn |
 | --- | --- |
@@ -571,7 +566,7 @@ Lora Port : 62 - Once every 23 transmissions
 
 
 
-## Table 62.2 : L54222  Water Diagnostic Byte Bitmap
+### Table 62.2 : L54222  Water Diagnostic Byte Bitmap
 
 | Bit | Descriptipn |
 | --- | --- |
@@ -584,7 +579,7 @@ Lora Port : 62 - Once every 23 transmissions
 | 6 | Undefined |
 | 7 | Undefined |
 
-## Table 62.3 : L54222 Status Byte Bitmap
+### Table 62.3 : L54222 Status Byte Bitmap
 
 | Bit | Descriptipn |
 | --- | --- |
