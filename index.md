@@ -111,7 +111,7 @@ Band 7(55-63)
 
 <a name="210"/>  
 
-# V 0.1 to V 0.5 
+#L54120 V 0.1 to V 0.5 
 
 
 L54120 Port 210/211 Aqura Point of Use Water Meter Commodity Packet  
@@ -135,7 +135,7 @@ LoRa Port: 211 - Triggered transmission
 
 
 
-# Port 52 Aqura Point of Use Water Meter Heath Packet
+## Port 52 Aqura Point of Use Water Meter Heath Packet
 
 Lora Port : 52 - Once every 23 transmissions
 
@@ -245,7 +245,7 @@ Raw hex payload: 00008d143f24e244e80e22
 
 
 
-# Port 52 Aqura Point of Use Water Meter Heath Packet
+## Port 52 Aqura Point of Use Water Meter Heath Packet
 
 Lora Port : 52 - Once every 23 transmissions
 
@@ -390,6 +390,66 @@ LoRa Port: 215 - Triggered transmission
 | 6 | 900 seconds |
 | 7 | 3600 seconds |
 
+
+## Port 62 Aqura Point of Use Water Meter Heath Packet
+
+Lora Port : 62 - Once every 23 transmissions
+
+
+| Byte Index | Descriptipn | Data Type | Bitmap / Notes |
+| --- | --- | --- | --- |
+| 0 | Hardware diagnostic | 8-bit bitmap | see table 52.1 |
+| 1 | Water diagnostic | 8-bit bitmap | see table 52.2 |
+| 2 | Temperature fahrenheit | 8-bit big endian unsigned int | |
+| 3 | Reset code |  8-bit big endian unsigned int  | |
+| 4 | Battery voltage | 16-bit big endian unsigned int | (value +200)/100 | 
+| 5 | | | |
+| 6 | Status byte | 8-bit bitmap | see table 52.3 |
+| 7 | Reset count | 16-bit big endian unsigned int  | 
+| 8 | | | |
+| 9 | Transmit attempt count | 16-bit big endian unsigned int | 
+| 10 | | | |
+
+
+
+## Table 62.1 : L54120 Hardware Diagnostic Byte Bitmap
+
+| Bit | Descriptipn |
+| --- | --- |
+| 0 | 1 if Main Baby Board Missing, 0 if Main Baby Board is detected.|
+| 1 | Undefined|
+| 2 | 1 if Didn't receive NetworkKey during Join Process|
+| 3 | 1 if the WaterMeter is in Aggressive Tx mode|
+| 4 | 1 if Second Baby Board Missing, 0 if Second Baby Board is detected.|
+| 5 | Deep Sleep Enabled (1 : Enabled via Write packet from production, 0 : disabled )|
+| 6 | Undefined | 
+| 7 | Undefined | 
+
+
+
+## Table 62.2 : L54120  Water Diagnostic Byte Bitmap
+
+| Bit | Descriptipn |
+| --- | --- |
+| 0 | 1 if there is no flow for 30 days, 0 when flow is detected. |
+| 1 | undefined |
+| 2 | undefined |
+| 3 | 1 if continuous flow for 5 hours. 0 when continuous flow is stopped |
+| 4 | 1 if continuous intermittent flow for 24 hours. 0 when when cont. int. flow is stopped |
+| 5 | 1 after detecting a low flow for 1 hour. 0 when low flow is stopped |
+| 6 | Undefined |
+| 7 | Undefined |
+
+## Table 62.3 : L54120 Status Byte Bitmap
+
+| Bit | Descriptipn |
+| --- | --- |
+| 7 MSB |  Magnet Flag 1 = Triggered packet,  0 = not a triggered packet |
+| 6,5,4 | Major firmware number |
+| 3,2,1 | Minor firmware number |
+| 0 |  Power up packet flag 1 = power up | 0 = not power up |
+
+
 <a name="214_L54222"/>  
 
 
@@ -475,7 +535,63 @@ LoRa Port: 215 - Triggered transmission
 | 6 | 900 seconds |
 | 7 | 3600 seconds |
 
+## Port 62 Aqura Point of Use Water Meter Heath Packet
 
+Lora Port : 62 - Once every 23 transmissions
+
+
+| Byte Index | Descriptipn | Data Type | Bitmap / Notes |
+| --- | --- | --- | --- |
+| 0 | Hardware diagnostic | 8-bit bitmap | see table 52.1 |
+| 1 | Water diagnostic | 8-bit bitmap | see table 52.2 |
+| 2 | Temperature fahrenheit | 8-bit big endian unsigned int | |
+| 3 | Reset code |  8-bit big endian unsigned int  | |
+| 4 | Battery voltage | 16-bit big endian unsigned int | (value +200)/100 | 
+| 5 | | | |
+| 6 | Status byte | 8-bit bitmap | see table 52.3 |
+| 7 | Reset count | 16-bit big endian unsigned int  | 
+| 8 | | | |
+| 9 | Transmit attempt count | 16-bit big endian unsigned int | 
+| 10 | | | |
+
+
+
+## Table 62.1 : L54222 Hardware Diagnostic Byte Bitmap
+
+| Bit | Descriptipn |
+| --- | --- |
+| 0 | 1 if Main Baby Board Missing, 0 if Main Baby Board is detected.|
+| 1 | Undefined|
+| 2 | 1 if Didn't receive NetworkKey during Join Process|
+| 3 | 1 if the WaterMeter is in Aggressive Tx mode|
+| 4 | 1 if Second Baby Board Missing, 0 if Second Baby Board is detected.|
+| 5 | Deep Sleep Enabled (1 : Enabled via Write packet from production, 0 : disabled )|
+| 6 | Undefined | 
+| 7 | Undefined | 
+
+
+
+## Table 62.2 : L54222  Water Diagnostic Byte Bitmap
+
+| Bit | Descriptipn |
+| --- | --- |
+| 0 | 1 if there is no flow for 30 days, 0 when flow is detected. |
+| 1 | undefined |
+| 2 | undefined |
+| 3 | 1 if continuous flow for 5 hours. 0 when continuous flow is stopped |
+| 4 | 1 if continuous intermittent flow for 24 hours. 0 when when cont. int. flow is stopped |
+| 5 | 1 after detecting a low flow for 1 hour. 0 when low flow is stopped |
+| 6 | Undefined |
+| 7 | Undefined |
+
+## Table 62.3 : L54222 Status Byte Bitmap
+
+| Bit | Descriptipn |
+| --- | --- |
+| 7 MSB |  Magnet Flag 1 = Triggered packet,  0 = not a triggered packet |
+| 6,5,4 | Major firmware number |
+| 3,2,1 | Minor firmware number |
+| 0 |  Power up packet flag 1 = power up | 0 = not power up |
 
 
 
