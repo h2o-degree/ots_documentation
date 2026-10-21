@@ -111,8 +111,7 @@ Band 7(55-63)
 
 <a name="210"/>  
 
-#L54120 V 0.1 to V 0.5 
-
+# L54120 V 0.1 to V 0.5 
 
 L54120 Port 210/211 Aqura Point of Use Water Meter Commodity Packet  
 For firmware version < 0.6 with born on date earlier than Oct 13th 2022  
@@ -142,20 +141,20 @@ Lora Port : 52 - Once every 23 transmissions
 
 | Byte Index | Descriptipn | Data Type | Bitmap / Notes |
 | --- | --- | --- | --- |
-| 0 | Hardware diagnostic | 8-bit bitmap | see table 52.1 |
-| 1 | Water diagnostic | 8-bit bitmap | see table 52.2 |
+| 0 | Hardware diagnostic | 8-bit bitmap | see table 52.1 below |
+| 1 | Water diagnostic | 8-bit bitmap | see table 52.2 below|
 | 2 | Temperature fahrenheit | 8-bit big endian unsigned int | |
 | 3 | Reset code |  8-bit big endian unsigned int  | |
 | 4 | Battery voltage | 16-bit big endian unsigned int | (value +200)/100 | 
 | 5 | | | |
-| 6 | Status byte | 8-bit bitmap | see table 52.3 |
+| 6 | Status byte | 8-bit bitmap | see table 52.3 below|
 | 7 | Reset count | 16-bit big endian unsigned int  | 
 | 8 | | | |
 | 9 | Transmit attempt count | 16-bit big endian unsigned int | 
 | 10 | | | |
 
 
-## Table 52.1 : L54120 Hardware Diagnostic Byte Bitmap
+### Table 52.1 : L54120 Hardware Diagnostic Byte Bitmap
 
 | Bit | Descriptipn |
 | --- | --- |
@@ -169,7 +168,7 @@ Lora Port : 52 - Once every 23 transmissions
 | 7 | Undefined | 
 
 
-## Table 52.2 : L54120  Water Diagnostic Byte Bitmap
+### Table 52.2 : L54120  Water Diagnostic Byte Bitmap
 
 | Bit | Descriptipn |
 | --- | --- |
@@ -182,7 +181,7 @@ Lora Port : 52 - Once every 23 transmissions
 | 6 | Undefined |
 | 7 | Undefined |
 
-## Table 52.3 : L54120 Status Byte Bitmap
+### Table 52.3 : L54120 Status Byte Bitmap
 
 
 
@@ -262,7 +261,7 @@ Lora Port : 52 - Once every 23 transmissions
 
 
 
-## Table 52.1 : L54120 Hardware Diagnostic Byte Bitmap
+### Table 52.1 : L54120 Hardware Diagnostic Byte Bitmap
 
 | Bit | Descriptipn |
 | --- | --- |
@@ -277,7 +276,7 @@ Lora Port : 52 - Once every 23 transmissions
 
 
 
-## Table 52.2 : L54120  Water Diagnostic Byte Bitmap
+### Table 52.2 : L54120  Water Diagnostic Byte Bitmap
 
 | Bit | Descriptipn |
 | --- | --- |
@@ -290,8 +289,7 @@ Lora Port : 52 - Once every 23 transmissions
 | 6 | Undefined |
 | 7 | Undefined |
 
-## Table 52.3 : L54120 Status Byte Bitmap
-
+### Table 52.3 : L54120 Status Byte Bitmap
 
 
 | Bit | Descriptipn |
