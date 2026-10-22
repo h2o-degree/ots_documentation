@@ -162,7 +162,7 @@ Lora Port : 52 - Once every 23 transmissions
 | 1 | Undefined|
 | 2 | 1 if Didn't receive NetworkKey during Join Process|
 | 3 | 1 if the WaterMeter is in Aggressive Tx mode|
-| 4 | 1 if Second Baby Board Missing, 0 if Second Baby Board is detected.|
+| 4 | Undefined |
 | 5 | Deep Sleep Enabled (1 : Enabled via Write packet from production, 0 : disabled )|
 | 6 | Undefined | 
 | 7 | Undefined | 
@@ -269,7 +269,7 @@ Lora Port : 52 - Once every 23 transmissions
 | 1 | Undefined|
 | 2 | 1 if Didn't receive NetworkKey during Join Process|
 | 3 | 1 if the WaterMeter is in Aggressive Tx mode|
-| 4 | 1 if Second Baby Board Missing, 0 if Second Baby Board is detected.|
+| 4 | Undefined |
 | 5 | Deep Sleep Enabled (1 : Enabled via Write packet from production, 0 : disabled )|
 | 6 | Undefined | 
 | 7 | Undefined | 
@@ -413,7 +413,7 @@ Lora Port : 62 - Once every 23 transmissions
 | 1 | Undefined|
 | 2 | 1 if Didn't receive NetworkKey during Join Process|
 | 3 | 1 if the WaterMeter is in Aggressive Tx mode|
-| 4 | 1 if Second Baby Board Missing, 0 if Second Baby Board is detected.|
+| 4 | Undefined |
 | 5 | Deep Sleep Enabled (1 : Enabled via Write packet from production, 0 : disabled )|
 | 6 | Undefined | 
 | 7 | Undefined | 
@@ -557,7 +557,7 @@ Lora Port : 62 - Once every 23 transmissions
 | 1 | Undefined|
 | 2 | 1 if Didn't receive NetworkKey during Join Process|
 | 3 | 1 if the WaterMeter is in Aggressive Tx mode|
-| 4 | 1 if Second Baby Board Missing, 0 if Second Baby Board is detected.|
+| 4 | Undefined |
 | 5 | Deep Sleep Enabled (1 : Enabled via Write packet from production, 0 : disabled )|
 | 6 | Undefined | 
 | 7 | Undefined | 
